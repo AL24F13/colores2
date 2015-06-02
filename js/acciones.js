@@ -1,6 +1,7 @@
 // JavaScript Document
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
+	audio=window.plugins.LowLatencyAudio;
 	audio.preloadFX ('B1','audio/C.mp3',function(){}, function (msg) { alert ("Error " +         msg );});
 	audio.preloadFX ('B2','audio/D.mp3',function(){}, function (msg) { alert ("Error " +         msg );});
 	audio.preloadFX ('B3','audio/E.mp3',function(){}, function (msg) { alert ("Error " +         msg );});
@@ -28,7 +29,7 @@ document.addEventListener("deviceready",function(){
 			$('#pantalla').append(quien($(this).attr('id')));
 			$(this).removeClass('pulsado');
 		});
-		audio=window.plugins.LowLatencyAudio;
+		
 		
 	
 	//div	
